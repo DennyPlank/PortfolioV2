@@ -6,8 +6,8 @@ const Home =  () => {
   const auth = useContext(AuthContext)
   return(
     <div>
-      <h1>Home</h1>
-      <RenderJson json={auth} />
+      <h1>Welcome! </h1>
+      <h2> My name is Denny, and I'm a Web Developer </h2>
     </div>
   )
 };

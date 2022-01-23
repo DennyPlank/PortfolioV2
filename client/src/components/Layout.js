@@ -5,7 +5,6 @@ import { AuthContext } from '../providers/AuthProvider';
 
 const Layout = () => {
   const navigate = useNavigate();
-
   const {authenticated, handleLogout} = useContext(AuthContext);
 
   const renderUILinks =()=>{
@@ -31,12 +30,14 @@ const Layout = () => {
     <>
       <Navbar expand = "md" bg = "dark" variant = "dark">
         <Container>
-          <Navbar.Brand onClick = {()=>navigate("/")}>Cool Logo</Navbar.Brand>
           <Navbar.Toggle aria-controls="response-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto" onSelect = {handleSelect}>
               <Nav.Link eventKey = "/">Home</Nav.Link>
               <Nav.Link eventKey = "/protected">Protected</Nav.Link>
+              <Nav.Link eventKey = "/portfolio">Portfolio</Nav.Link>
+              <Nav.Link eventKey = "/about">About Me</Nav.Link>
+              <Nav.Link eventKey = "/contact">Contact</Nav.Link>
             </Nav>
             <Nav className="justify-content-end" onSelect = {handleSelect}>
               {renderUILinks()}
